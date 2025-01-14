@@ -1,0 +1,39 @@
+.solver {
+  position: relative;
+  width: 15rem;
+  height: 15rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 1rem;
+  background-color: #eee;
+  border-radius: 0.25rem;
+
+  .visualBoard {
+    z-index: 1;
+  }
+
+  .controls {
+    z-index: 1;
+    display: flex;
+    justify-content: center;
+    grid-column-gap: 0.5rem;
+    padding: 0.5rem;
+  }
+
+  .instructions {
+    z-index: 1;
+    p {
+      margin: 0;
+      margin-top: 0.5rem;
+    }
+  }
+
+  img {
+    position: absolute;
+    bottom: 0;
+    right: -3rem;
+    z-index: 0;
+    width: 8rem;
+  }
+}

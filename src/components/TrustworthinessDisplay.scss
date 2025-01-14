@@ -1,0 +1,38 @@
+.trustworthinessDisplay {
+  .trustBoardDisplay {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    grid-row-gap: 0.5rem;
+    width: 12rem;
+    height: 12rem;
+    background-color: #eee;
+    border-radius: 0.25rem;
+  }
+
+  p {
+    margin: 0;
+    margin-top: 0.5rem;
+  }
+
+  .previousGames {
+    margin-top: 0.5rem;
+    display: flex;
+    grid-column-gap: 0.5rem;
+    grid-row-gap: 0.5rem;
+    flex-wrap: wrap;
+  }
+}
+
+.gameOverview {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 12rem;
+  height: 12rem;
+  background-color: #eee;
+  border-radius: 0.25rem;
+}

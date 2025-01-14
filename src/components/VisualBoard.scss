@@ -1,0 +1,31 @@
+.visualBoard {
+  display: grid;
+  width: fit-content;
+  grid-template-columns: auto auto auto;
+  grid-column-gap: 0.2rem;
+  grid-row-gap: 0.2rem;
+  background-color: var(--near-black);
+  border-radius: 0.25rem;
+  padding: 0.5rem;
+
+  > * {
+    color: #fff;
+    background-color: #999;
+    width: 2rem;
+    height: 2rem;
+    text-align: center;
+    line-height: 2rem;
+
+    > input {
+      width: 1rem;
+    }
+  }
+
+  .highlightSquare {
+    background-color: #f8f;
+  }
+
+  .coveredSquare {
+    color: #777;
+  }
+}

@@ -1,0 +1,51 @@
+:root {
+  --near-black: #555;
+}
+
+body {
+  font-family: sans-serif;
+  color: black;
+}
+
+button {
+  border-radius: 0.25rem;
+  border: 4px solid var(--near-black);
+  padding: 0.5rem;
+  background-color: #f8f;
+  color: #fff;
+  cursor: pointer;
+}
+
+button:hover {
+  filter: brightness(110%);
+}
+
+button:active {
+  filter: brightness(90%);
+}
+
+button:disabled {
+  filter: brightness(100%);
+  cursor: default;
+  background-color: #888;
+}
+
+input {
+  border: none;
+  border-radius: 0.25rem;
+}
+
+.app {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  grid-row-gap: 1rem;
+  margin: 2rem;
+
+  .reassurance {
+    cursor: pointer;
+    color: #888;
+    font-style: italic;
+  }
+}
+
