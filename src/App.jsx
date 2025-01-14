@@ -1,8 +1,8 @@
-import { useState } from "react";
-import Solver from "./components/Solver";
-import TrustworthinessDisplay from "./components/TrustworthinessDisplay";
+import { useState } from 'react';
+import Solver from './components/Solver';
+import TrustworthinessDisplay from './components/TrustworthinessDisplay';
 
-import "./App.scss";
+import './App.scss';
 
 const App = () => {
   const [reassuranceNeeded, setReassuranceNeeded] = useState(false);

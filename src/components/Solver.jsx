@@ -1,19 +1,19 @@
-import { useState, useEffect, useCallback } from "react";
-import { solve, evaluateBoard, evaluateLine } from "../utils/solving";
-import { CHOICE_LINES } from "../constants";
-import BoardState from "../boardState";
-import VisualBoard from "./VisualBoard";
+import { useState, useEffect, useCallback } from 'react';
+import { solve, evaluateBoard, evaluateLine } from '../utils/solving';
+import { CHOICE_LINES } from '../constants';
+import BoardState from '../boardState';
+import VisualBoard from './VisualBoard';
 
-import "./Solver.scss";
-import MgpDisplay from "./MgpDisplay";
+import './Solver.scss';
+import MgpDisplay from './MgpDisplay';
 
 function getImageForAveragePrize(prize) {
   if (prize >= 1300) {
-    return "./rulia_verygood.png";
+    return './rulia_verygood.png';
   } else if (prize >= 500) {
-    return "./rulia_think.png";
+    return './rulia_think.png';
   } else {
-    return "./rulia_verybad.png";
+    return './rulia_verybad.png';
   }
 }
 

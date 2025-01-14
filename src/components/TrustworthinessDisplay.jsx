@@ -1,10 +1,10 @@
-import { useState } from "react";
-import GameSimulationWorker from "../gameSimulationWorker?worker";
-import BoardState from "../boardState";
-import VisualBoard from "./VisualBoard";
-import MgpDisplay from "./MgpDisplay";
+import { useState } from 'react';
+import GameSimulationWorker from '../gameSimulationWorker?worker';
+import BoardState from '../boardState';
+import VisualBoard from './VisualBoard';
+import MgpDisplay from './MgpDisplay';
 
-import "./TrustworthinessDisplay.scss";
+import './TrustworthinessDisplay.scss';
 
 const MAX_GAMES = 100;
 
@@ -55,13 +55,13 @@ const TrustworthinessDisplay = ({}) => {
 
     worker.onmessage = (e) => {
       if (
-        e.data.messageType === "GAME_START" ||
-        e.data.messageType === "GAME_UPDATE"
+        e.data.messageType === 'GAME_START' ||
+        e.data.messageType === 'GAME_UPDATE'
       ) {
         setBoardState(e.data.data.boardState);
       }
 
-      if (e.data.messageType === "GAME_END") {
+      if (e.data.messageType === 'GAME_END') {
         setWinnings((prev) => prev + e.data.data.prize);
         setLargestPossibleWinnings(
           (prev) => prev + e.data.data.largestPossiblePrize
@@ -70,13 +70,13 @@ const TrustworthinessDisplay = ({}) => {
         setPreviousGames((prev) => [...prev, e.data.data]);
       }
 
-      if (e.data.messageType === "END") {
+      if (e.data.messageType === 'END') {
         setSimulating(false);
       }
     };
 
     worker.postMessage({
-      messageType: "START",
+      messageType: 'START',
       data: { numberOfGames: MAX_GAMES },
     });
   }
@@ -103,7 +103,7 @@ const TrustworthinessDisplay = ({}) => {
             Games played: {numberOfGames}/{MAX_GAMES}
           </p>
           <p>
-            Average MGP per game:{" "}
+            Average MGP per game:{' '}
             <MgpDisplay amount={winnings / numberOfGames} />
           </p>
           <p>Previous games:</p>

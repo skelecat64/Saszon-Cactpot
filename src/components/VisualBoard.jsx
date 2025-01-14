@@ -1,4 +1,4 @@
-import "./VisualBoard.scss";
+import './VisualBoard.scss';
 
 const VisualBoard = ({
   boardState,
@@ -28,8 +28,8 @@ const VisualBoard = ({
           <div
             className={
               highlightSquares.includes(i)
-                ? "highlightSquare coveredSquare"
-                : "coveredSquare"
+                ? 'highlightSquare coveredSquare'
+                : 'coveredSquare'
             }
             key={`${i}_covered`}
           >
@@ -44,7 +44,7 @@ const VisualBoard = ({
           </div>
         ) : (
           <div
-            className={highlightSquares.includes(i) ? "highlightSquare" : null}
+            className={highlightSquares.includes(i) ? 'highlightSquare' : null}
             key={`${i}_${x}`}
           >
             {x}
