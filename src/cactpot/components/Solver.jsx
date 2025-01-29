@@ -1,11 +1,11 @@
 import { useState, useEffect, useCallback } from 'react';
-import { solve, evaluateBoard, evaluateLine } from '../utils/solving';
+import { solve, evaluateBoard, evaluateLine } from '../solving';
 import { CHOICE_LINES } from '../constants';
 import BoardState from '../boardState';
 import VisualBoard from './VisualBoard';
+import MgpDisplay from './MgpDisplay';
 
 import './Solver.scss';
-import MgpDisplay from './MgpDisplay';
 
 function getImageForAveragePrize(prize) {
   if (prize >= 1300) {

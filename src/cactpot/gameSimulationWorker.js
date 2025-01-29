@@ -1,7 +1,7 @@
-import BoardState from "./boardState";
-import { CHOICE_LINES } from "./constants";
-import { getRandomized, randomIntegerRange } from "./utils/randomness";
-import { evaluateBoard, getPrize, solve } from "./utils/solving";
+import BoardState from './boardState';
+import { CHOICE_LINES } from './constants';
+import { getRandomized, randomIntegerRange } from '../utils/randomness';
+import { evaluateBoard, getPrize, solve } from './solving';
 
 function createRandomBoard() {
   return getRandomized([1, 2, 3, 4, 5, 6, 7, 8, 9]);
@@ -18,7 +18,7 @@ function getLargestPossiblePrize(trueBoard) {
 
 onmessage = (e) => {
   console.log(e.data);
-  if (e.data.messageType !== "START") {
+  if (e.data.messageType !== 'START') {
     return;
   }
 
@@ -30,7 +30,7 @@ onmessage = (e) => {
     boardState.uncover(initialUncoverIndex, trueBoard[initialUncoverIndex]);
 
     postMessage({
-      messageType: "GAME_START",
+      messageType: 'GAME_START',
       data: { boardState: boardState.clone(), gameNumber: i + 1 },
     });
 
@@ -39,7 +39,7 @@ onmessage = (e) => {
       boardState.uncover(topIndex, trueBoard[topIndex]);
 
       postMessage({
-        messageType: "GAME_UPDATE",
+        messageType: 'GAME_UPDATE',
         data: { boardState: boardState.clone() },
       });
     }
@@ -49,7 +49,7 @@ onmessage = (e) => {
     const prize = getPrize(trueBoard.filter((_, i) => chosenLine.includes(i)));
 
     postMessage({
-      messageType: "GAME_END",
+      messageType: 'GAME_END',
       data: {
         boardState: boardState,
         trueBoard: trueBoard,
@@ -62,5 +62,5 @@ onmessage = (e) => {
     });
   }
 
-  postMessage({ messageType: "END" });
+  postMessage({ messageType: 'END' });
 };

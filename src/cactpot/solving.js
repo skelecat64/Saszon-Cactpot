@@ -1,4 +1,4 @@
-import { CHOICE_LINES, SUM_REWARDS } from "../constants";
+import { CHOICE_LINES, SUM_REWARDS } from './constants';
 
 export function getPrize(numbers) {
   return SUM_REWARDS[numbers.reduce((a, x) => a + x, 0)];

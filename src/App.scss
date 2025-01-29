@@ -1,5 +1,6 @@
 :root {
   --near-black: #555;
+  --theme: #f8f;
 }
 
 body {
@@ -11,7 +12,7 @@ button {
   border-radius: 0.25rem;
   border: 4px solid var(--near-black);
   padding: 0.5rem;
-  background-color: #f8f;
+  background-color: var(--theme);
   color: #fff;
   cursor: pointer;
 }
@@ -33,18 +34,12 @@ button:disabled {
 input {
   border: none;
   border-radius: 0.25rem;
+  background-color: #eee;
 }
 
 .app {
   display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-  grid-row-gap: 1rem;
-  margin: 2rem;
-
-  .reassurance {
-    cursor: pointer;
-    color: #888;
-    font-style: italic;
-  }
+  flex-wrap: wrap;
+  gap: 2rem;
+  align-items: start;
 }
