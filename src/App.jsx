@@ -1,7 +1,7 @@
-import { css } from '@emotion/react';
 import Widget from './components/Widget';
 import Solver from './cactpot/components/Solver';
 import DonationCalculator from './donation/components/DonationCalculator';
+import FeteNumbers from './components/FeteNumbers';
 
 import './App.scss';
 
@@ -11,8 +11,11 @@ const App = () => {
       <Widget title="Mini Cactpot">
         <Solver />
       </Widget>
-      <Widget title={'Donation'}>
+      <Widget title="Donation">
         <DonationCalculator />
+      </Widget>
+      <Widget title="Fête Points">
+        <FeteNumbers />
       </Widget>
     </div>
   );

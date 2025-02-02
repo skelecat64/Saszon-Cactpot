@@ -8,17 +8,15 @@ const Widget = ({ title, className, children }) => {
         border-radius: 0.25rem;
         display: flex;
         flex-direction: column;
+        align-items: stretch;
       `}
       className={className}
     >
       <h1
         css={css`
           margin: 0;
+          margin-top: 1rem;
           text-align: center;
-          margin-top: 0.5rem;
-          margin-bottom: 0;
-          margin-left: 1rem;
-          margin-right: 1rem;
         `}
       >
         {title}

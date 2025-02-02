@@ -1,6 +1,8 @@
 import { useEffect, useState } from 'react';
 import { css } from '@emotion/react';
 import PieceSelector from './PieceSelector';
+import Panel from '../../components/Panel';
+import ThingList from '../../components/ThingList';
 
 const DEFAULT_PIECES = {
   'Allagan Bronze Piece': 100,
@@ -66,42 +68,9 @@ const DonationCalculator = ({ className }) => {
         />
       </div>
       {results ? (
-        <ul
-          css={css`
-            margin: 0;
-            padding: 0.5rem;
-            list-style: none;
-            text-align: center;
-            flex-grow: 1;
-            display: flex;
-            border-radius: 0.25rem;
-            flex-direction: column;
-            justify-content: center;
-            background-color: #eee;
-          `}
-        >
-          {Object.keys(pieces)
-            .filter((x) => results[x] != null && results[x] > 0)
-            .map((x) => (
-              <li
-                key={x}
-                css={css`
-                  overflow: hidden;
-                  text-overflow: ellipsis;
-                  white-space: nowrap;
-                `}
-              >
-                {results[x]}{' '}
-                <span
-                  css={css`
-                    font-style: italic;
-                  `}
-                >
-                  {x}
-                </span>
-              </li>
-            ))}
-        </ul>
+        <Panel>
+          <ThingList things={results}></ThingList>
+        </Panel>
       ) : null}
     </div>
   );
