@@ -5,11 +5,11 @@ import Panel from '../../components/Panel';
 import ThingList from '../../components/ThingList';
 
 const DEFAULT_PIECES = {
-  'Allagan Tin Piece': 25,
-  'Allagan Bronze Piece': 100,
-  'Allagan Silver Piece': 500,
-  'Allagan Gold Piece': 2500,
   'Allagan Platinum Piece': 10000,
+  'Allagan Gold Piece': 2500,
+  'Allagan Silver Piece': 500,
+  'Allagan Bronze Piece': 100,
+  'Allagan Tin Piece': 25,
 };
 
 const DonationCalculator = ({ className }) => {
