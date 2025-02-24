@@ -4,6 +4,7 @@ import DonationCalculator from './donation/components/DonationCalculator';
 import FeteNumbers from './components/FeteNumbers';
 
 import './App.scss';
+import ChocoboColor from './chocoboColor/components/ChocoboColor';
 
 const App = () => {
   return (
@@ -16,6 +17,9 @@ const App = () => {
       </Widget>
       <Widget title="Fête Points">
         <FeteNumbers />
+      </Widget>
+      <Widget title="Chocobo Colour">
+        <ChocoboColor />
       </Widget>
     </div>
   );

@@ -1,7 +1,12 @@
 import React from 'react';
 import { css } from '@emotion/react';
 
-const ThingList = ({ things }) => {
+const ThingList = ({ things, sorted }) => {
+  let keys = Object.keys(things);
+  if (sorted) {
+    keys.sort();
+  }
+
   return (
     <div
       css={css`
@@ -10,7 +15,7 @@ const ThingList = ({ things }) => {
         grid-column-gap: 1rem;
       `}
     >
-      {Object.keys(things).map((x) => (
+      {keys.map((x) => (
         <React.Fragment key={x}>
           <p
             css={css`
